@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="main-header flex center-items space-content">
+    <a href="#" class="brand-link txt--black">snap</a>
+
+    <div class="overlay ">
+      <nav class="primary-navigation flex center-items space-content">
+        <button class="close"><img src="images/icon-close-menu.svg" alt=""></button>
+  
+        <ul class="nav-list flex txt--grey bold">
+  
+          <li class="nav-item  ">
+            <button class="dropdown-toggle txt--grey bold">
+              <span class="dropdown-title">Features</span> <img class="icon-arrow" src="images/icon-arrow-down.svg" alt="an arrow to the down direction"/>
+            </button>
+            <div class="dropdown-menu">
+              <ul class="dropdown-list txt--grey flex">
+                <li class="dropdown-item flex center-items"> <img src="images/icon-todo.svg" alt="Icon of the todo list"/> Todo List</li>
+                <li class="dropdown-item flex center-items"> <img src="images/icon-calendar.svg" alt="Icon of the calendar"/>Calendar</li>
+                <li class="dropdown-item flex center-items"> <img src="images/icon-reminders.svg" alt="Icon of the reminders"> Reminders</li>
+                <li class="dropdown-item flex center-items"> <img src="images/icon-planning.svg" alt="Icon of the planning"> Planning</li>
+  
+  
+  
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item  ">
+            <button class="dropdown-toggle txt--grey bold">
+              <span class="dropdown-title">Company</span> <img class="icon-arrow" src="images/icon-arrow-down.svg" alt="an arrow to the down direction"/>
+            </button>
+            <div class="dropdown-menu">
+              <ul class="dropdown-list txt--grey flex">
+                <li class="dropdown-item ">  History</li>
+                <li class="dropdown-item ">  Our Team</li>
+                <li class="dropdown-item ">  Blog</li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item link">Careers</li>
+          <li class="nav-item link">About</li>
+  
+        </ul>
+        
+        <div class="auth-actions flex txt--grey">
+          <button class="login txt--grey bold">Login</button>
+          <button class="register txt--grey bold">Register</button>
+        </div>
+  
+      </nav>
+    </div>
+    <img class="open" src="images/icon-menu.svg" alt="photo of the menu icon">
+  </header>
+  <main class="main-container">
+    <section class="intro-container flex">
+
+      <picture>
+        <source media="(max-width: 749px)" srcset="images/image-hero-mobile.png" />
+        <source media="(min-width: 750px)" srcset="images/image-hero-desktop.png" />
+        <img class="intro-img" src="images/image-hero-mobile.png" alt="Image of a guys with a computer" />
+
+      </picture>
+
+
+      <div class="info-container flex center-items">
+        <div class="info-text flex center-items">
+          <h1 class="info-title txt--black bold">Make remote work</h1>
+          <p class="info-line txt--grey">Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.</p>
+          <button class="learn-more txt--white">Learn more</button>
+        </div>
+        <ul class="clients-list flex center-items">
+          <li class="client-item">
+            <img class="img-client" src="images/client-databiz.svg" alt="¨picture of logo databiz">
+          </li>
+          <li class="client-item">
+            <img class="img-client" src="images/client-audiophile.svg" alt="¨picture of logo audio phile">
+
+          </li>
+          <li class="client-item">
+            <img class="img-client" src="images/client-meet.svg" alt="¨picture of logo meet">
+
+          </li>
+          <li class="client-item">
+            <img class="img-client" src="images/client-maker.svg" alt="¨picture of logo maker">
+          </li>
+
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="main-footer flex center-content"> 
+
+
+  <div class="attribution  text--grey">
+      Challenge by <a class="txt--black bold" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="txt--black bold" href="https://github.com/Yavanha" target="_blank">y4rb0w (Yavanha)</a>.
+    </div>
+</footer> 
+
+
+
+
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

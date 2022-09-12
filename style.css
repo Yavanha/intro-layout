@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+
+/* GENERAL  Styling*/
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-grey: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+
+}
+
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+
+
+}
+
+body {
+    background-color: #cac8c7
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+/** Reusable style **/
+
+.flex {
+    display: flex;
+}
+
+.txt--white {
+    color: var(--almost-white)
+}
+
+
+.txt--grey {
+    color: var(--medium-grey)
+}
+
+.txt--black {
+    color: var(--almost-black);
+}
+
+.space-content {
+    justify-content: space-between;
+}
+
+.center-content {
+    justify-content: center;
+}
+
+.center-items {
+    align-items: center;
+}
+
+
+.bold {
+    font-weight: 700;
+}
+
+
+
+/** Mobile first*/
+
+/** header and navigation */
+
+.main-header {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.primary-navigation {
+    list-style: none;
+    transform: translateX(0%);
+}
+
+.nav-list {
+    list-style: none;
+}
+
+
+
+.nav-item {
+    font-size: 1.6rem;
+    column-gap: 1rem;
+    cursor: pointer;
+}
+
+.dropdown {
+    column-gap: 1rem;
+}
+
+
+.dropdown-toggle {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+
+.dropdown-title {
+    margin-right: 1rem;
+}
+
+.hide-menu {
+    max-height: 0;
+
+}
+
+.dropdown-menu {
+    /* max-height: 0;
+    overflow: hidden;
+    transition-property: max-height; */
+    transform: scaleY(0);
+    max-height: 0;
+}
+
+
+
+
+
+.dropdown-list {
+    list-style: none;
+    padding: 4rem;
+    padding-bottom: 0;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.dropdown-item {
+    gap:1rem;
+}
+
+
+
+
+
+.register {
+    padding: 1rem 0;
+    border-radius: 1.2rem;
+    border: .2rem solid var(--medium-grey)
+}
+
+
+/* Main content */
+
+.intro-container {
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.brand-link:link {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+.intro-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/** text container */
+
+.info-container {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-text {
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.info-title {
+    font-size: 3.6rem;
+    letter-spacing: -.1rem;
+}
+
+.info-line {
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1.6;
+
+}
+
+.learn-more {
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    font-size: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 1rem;
+
+}
+
+/** client associate **/
+
+.clients-list {
+    list-style: none;
+    gap: 2rem;
+}
+
+.img-client {
+    max-width: 90%;
+    height: auto;
+}
+
+/** footer container */
+
+.main-footer {
+    padding-top: .5rem;
+
+}
+
+.attibution {
+    gap: .5rem;
+}
+
+.attibution > a {
+    cursor: pointer;
+}
+
+.animate {
+
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+
+}
+
+
+
+/* Navigation  for mobile*/
+
+@media (max-width: 750px) {
+
+    /* navigation bar as slide */
+
+    .overlay-active {
+        position: fixed;
+        inset: 0 0 0 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 35%;
+        background-color: var(--almost-white);
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: flex-start;
+        row-gap: 3rem;
+        transform: translateX(100%);
+        transition-property: transform;
+
+    }
+
+    .nav-list {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem
+    }
+
+
+    .close {
+        align-self: flex-end;
+    }
+
+
+    .auth-actions {
+        min-width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .login,
+    .register {
+        min-width: 90%;
+        align-self: center;
+    }
+
+
+
+
+
+}
+
+
+
+/** DESKTOP version */
+
+@media (min-width: 750px) {
+
+    /** Navigation header **/
+
+    .main-header,
+    .main-container {
+        max-width: 144rem;
+        margin: 0 auto;
+    }
+
+    .main-header {
+        padding: 1.5rem 3rem;
+        justify-content: flex-start;
+
+    }
+
+
+    .brand-link:link {
+        margin-inline-end: 5rem;
+    }
+
+    .overlay {
+        flex:1;
+    }
+
+
+
+
+    .nav-list {
+        gap: 4rem;
+    }
+    
+    .nav-item {
+        position: relative;
+
+    }
+
+
+
+
+    .dropdown-list {
+        padding: 2rem;
+        row-gap: 2.4rem;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        background-color: #fff;
+        right: 10%;
+        top: 200%;
+        border-radius: 1rem;
+    }
+
+    .open,
+    .close {
+        display: none;
+    }
+
+
+   
+
+    .auth-actions {
+
+        gap: 3rem;
+    }
+
+
+
+    .link:hover,
+    .register:hover,
+    .login:hover {
+        color: var(--almost-black);
+        font-weight: 700;
+    }
+
+    .register:hover {
+        border-color: var(--almost-black);
+
+    }
+
+    .register {
+        padding: 1rem 2rem;
+    }
+
+
+
+
+
+    /** main container */
+
+    .intro-container {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: center;
+        min-height: 80vh;
+    }
+
+
+    .intro-container>picture {
+
+        flex-basis: 33%;
+    }
+
+    .info-container {
+        flex-basis: 40%;
+        align-items: flex-start;
+        gap: 10rem
+    }
+
+    .info-text {
+        /* max-width: 80%; */
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .info-title {
+        max-width: 95%;
+        font-size: 8.3rem;
+    }
+
+    .info-line {
+        max-width: 80%;
+        text-align: left;
+        font-size: 1.8rem;
+        line-height: 1.6;
+
+    }
+
+    .learn-more {
+        font-size: 1.5rem;
+        padding: 2rem 3rem;
+        border: .2rem solid var(--almost-black);
+        cursor: pointer;
+    }
+
+    .learn-more:hover {
+        background-color: var(--almost-white);
+        color: var(--almost-black);
+    }
+
+
+
+    .clients-list {
+
+        gap: 4rem;
+    }
+
+
+}
